@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+ul {
+    list-style-type: none;
+    margin: 1px;
+    padding: 0;
+    overflow: hidden;
+    background-color: red;
+}
+li {
+    float: left;
+}
+li a {
+    display: inline-grid;
+    color: yellow;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: orange;
+}
+.active {
+    background-color: coral;
+}
+</style>
+
+<body>
+
+<ul>
+  <li><a href="#home" class="active">Home</a></li>
+  <li><a href="#profile">Profile</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
+
+<div>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Comic Sans MS, Segoe Print, sans-serif;}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: orange;
+    margin: auto;
+    padding: 20px;
+    border: 5px solid coral;
+    width: 80%;
+}
+.close {
+    color: green;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: turquoise;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<button id="myBtn">MODAL</button>
+
+<div id="myModal" class="modal">
+
+  
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Ceva, altceva, orice</p>
+  </div>
+
+</div>
+
+<script>
+var modal = document.getElementById('myModal');
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+// Deschidere form modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+// Inchidere (x)
+span.onclick = function() {
+    modal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<div>
+
+<style>
+table, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<table id="myTable">
+  <tr>
+    <td>Nume</td>
+    <td>Prenume</td>
+  </tr>
+  <tr>
+    <td>Moldovan</td>
+    <td>Alin</td>
+  </tr>
+  <tr>
+    <td>Dumitrescu</td>
+    <td>Radu</td>
+  </tr>
+  <tr>
+    <td>Biris</td>
+    <td>Matei</td>
+  </tr>
+</table>
+</body>
+
+
+
+</body>
+</html>
