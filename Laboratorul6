@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<script>
+//ex 1
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
+console.log("Ex 1:");
+console.log(reverseString("12345"));
+console.log(reverseString("asdfg"));
+//ex 2
+function removeChar(str, poz_char){
+	char1 = str.substring(0, poz_char);
+  	char2 = str.substring(poz_char + 1, str.length);
+  	return (char1 + char2);
+}
+console.log("\nEx 2:");
+console.log(removeChar("String", 0)); //output ‘tring’
+console.log(removeChar("String", 4)); //output ‘Strig’
+//ex 3
+function div37(nr){
+	if(nr%3==0)
+		return true;
+	else if(nr%7==0)
+		return true;
+	else
+		return false;
+}
+console.log("\nEx 3:");
+console.log(div37(12)); //output true
+console.log(div37(14)); //output true
+console.log(div37(10)); //output false
+//ex 4
+function isNumeric(x) {
+  if (isNaN(x)) {
+    return false;
+  }
+  else
+  	return true;
+}
+console.log("\nEx 4:")
+console.log(isNumeric(1)); //output true
+console.log(isNumeric("asd")); //output false
+//ex 5
+var numbers = [1, 2, 3];
+var sum = 0;
+for (var i = 0; i < numbers.length; i++) {
+  sum += numbers[i];
+}
+var sum2 = sum + "+a";
+var sum3 = "a+s+d";
+console.log("\nEx 5:")
+console.log(sum);
+console.log(sum2);
+console.log(sum3);
+//ex 6
+function checkProp(obj, key) {
+    return obj != null && hasOwnProperty.call(obj, key);
+  }
+console.log("\nEx 6:");
+console.log(checkProp({red: "red", green: "green", white: "white"}, "green")); //true
+console.log(checkProp({red: "red", green: "green", white: "white"}, "black")); //false
+</script>
+</html>
